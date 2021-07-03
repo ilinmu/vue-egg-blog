@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'normalize.css/normalize.css';
+import '@ilinmu/atom/dist/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
