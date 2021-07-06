@@ -4,8 +4,6 @@ import {
   Button,
 } from '@ilinmu/atom';
 
-import { ButtonType } from '@ilinmu/atom/dist/components/Button/button';
-
 function Login() {
   const [account, setAccount] = useState('');
   const [password, setPassword] = useState('');
@@ -23,9 +21,23 @@ function Login() {
   }
   return (
     <div className="login">
-      <Input placeholder="请输入账号" onChange={handleChangeAccount} value={account} />
-      <Input type="password" onChange={handleChangePassword} value={password} placeholder="请输入密码" />
-      <Button type={ButtonType.Primary} onClick={handleLogin}>登录</Button>
+      <Input
+        placeholder="请输入账号"
+        onChange={handleChangeAccount}
+        value={account}
+      />
+      <Input
+        placeholder="请输入密码"
+        type="password"
+        onChange={handleChangePassword}
+        value={password}
+      />
+      <Button
+        type="primary"
+        onClick={handleLogin}
+      >
+        登录
+      </Button>
     </div>
   );
 }
