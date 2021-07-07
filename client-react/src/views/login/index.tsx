@@ -3,6 +3,7 @@ import {
   Input,
   Button,
 } from '@ilinmu/atom';
+import axios from 'axios';
 
 function Login() {
   const [account, setAccount] = useState('');
@@ -18,6 +19,10 @@ function Login() {
   const handleLogin = () => {
     console.log('account', account);
     console.log('password', password);
+    axios.post('http://rap2api.taobao.org/app/mock/286585/postLogin', {
+      name: account,
+      password: password,
+    });
   }
   return (
     <div className="login">
